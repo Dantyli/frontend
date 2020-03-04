@@ -8,6 +8,9 @@ function Splash(props){
        let i=1;
        const timer=setInterval(() => {
                     i++;
+                    if(i>18){
+                        clearInterval(timer)
+                    }
                     setPercent(i*5)
                 }, 300);
         log().then(()=>{
